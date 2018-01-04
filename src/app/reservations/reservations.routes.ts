@@ -1,10 +1,13 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { ModuleWithProviders } from '@angular/core';
+import { Route, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { ReservationsComponent } from './reservations.component';
 
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
-})
-export class ReservationsRoutingModule { }
+export const UserRoutes: Route[] = [
+  {
+    path: '',
+    component: ReservationsComponent,
+    pathMatch: 'full'
+  }
+];
+export const routing: ModuleWithProviders = RouterModule.forChild(UserRoutes);

@@ -1,14 +1,28 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { ModuleWithProviders } from '@angular/core';
+import { Route, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { LoginComponent } from './login/login.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
-@NgModule({
-  imports: [
-    RouterModule.forChild(routes)
-  ],
-  exports: [
-    RouterModule
-  ]
-})
-export class UsersRoutingModule { }
+export const appRoutes: Route[] = [
+  {
+    path: '',
+    component: LoginComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'users',
+    loadChildren: './users/users.module#UsersModule'
+  },
+  {
+    path: 'reservations',
+    loadChildren: './reservations/reservations.module#ReservationsModule'
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
+  }
+];
+
+
+export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
