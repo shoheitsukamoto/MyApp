@@ -9,6 +9,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 export const appRoutes: Route[] = [
   {
     path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
+    path: 'login',
     component: LoginComponent,
     pathMatch: 'full'
   },

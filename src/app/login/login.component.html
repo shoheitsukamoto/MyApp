@@ -1,3 +1,68 @@
-<p>
-  login works!
-</p>
+<div class="login-container">
+
+  <div class="login">
+    <div class="login__header">
+      <app-service-title modifier="login"></app-service-title>
+      <h2 class="login__title">管理者用ログイン</h2>
+    </div>
+
+    <div class="login__body">
+      <!-- BEGIN LOGIN FORM -->
+      <form class="login-form" action="index.html" method="post">
+        <p>こちらはearthcarタクシーの管理者アカウント専用のログイン画面です。<br>
+          <a class="login-link" href="page_user_login_4.html">サービスサイトへのログインはこちら</a>
+        </p>
+
+        <input class="login-form__mail" id="login-form__mail" type="text" placeholder="earth ID (メールアドレス)でログインする" pInputText />
+        <input class="login-form__pass" id="login-form__pass" type="password" placeholder="Password" pPassword />
+
+        <!-- <div class="alert alert-danger display-hide">
+          <button class="close" data-close="alert"></button>
+          <span> 入力項目にエラーがあります。 </span>
+        </div> -->
+
+        <div class="form-group">
+          <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+          <label class="control-label visible-ie8 visible-ie9">earth ID (メールアドレス)でログインする</label>
+          <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="earth ID (メールアドレス)でログインする" name="username" /> </div>
+        <div class="form-group form-password">
+          <label class="control-label visible-ie8 visible-ie9">Password</label>
+          <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="password" maxlength="32" />
+          <button class="display btn btn-toggle" type="button">表示</button>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-circle btn-primary" style="width: 100%;">ログインする</button>
+          <div class="text-center">
+            <a class="login-link" href="javascript:;" id="forget-password">パスワードをわすれた方はこちら</a>
+          </div>
+        </div>
+        <div class="login-options">
+          <h4>SNSでログインする</h4>
+          <div class="sns-btns">
+            <a type="button" class="btn btn-primary">Facebook</a>
+            <span class="spacer"></span>
+            <a type="button" class="btn btn-danger">Google</a>
+          </div>
+        </div>
+      </form>
+      <!-- END LOGIN FORM -->
+      <!-- BEGIN FORGOT PASSWORD FORM -->
+      <form class="forget-form" action="index.html" method="post">
+        <h3 class="font-green">Forget Password ?</h3>
+        <p> Enter your e-mail address below to reset your password. </p>
+        <div class="form-group">
+          <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email" /> </div>
+        <div class="form-actions">
+          <button type="button" id="back-btn" class="btn green btn-outline">Back</button>
+          <button type="submit" class="btn btn-success uppercase pull-right">Submit</button>
+        </div>
+      </form>
+      <!-- END FORGOT PASSWORD FORM -->
+    </div>
+
+    <div class="login__footer">
+      2014 &copy; Metronic. Admin Dashboard Template.
+    </div>
+  </div>
+
+</div>

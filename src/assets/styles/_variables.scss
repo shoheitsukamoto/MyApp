@@ -1,0 +1,50 @@
+
+// z-index
+$z-index--login: 100;
+$z-index--header: 90;
+$z-index--aside: 10;
+$z-index--multiselect-dropdown: 11;
+$z-index--modal-window: 1000;
+
+
+// color
+$theme--base-color: #f2f2f2;
+$theme--main-color: #fff;
+$theme--accent-color: #68a7e7;
+
+$color--primary: #1d2088;
+$color--error: #e73d4a;
+$color--warn: #ffd700;
+$color--success: #53c1e4;
+$color--diabled: #ccc;
+
+$blue--title: #377bb5;
+$blue--input-outline: #c2cad8;
+
+
+// font-family
+$font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+// font-size
+$font-size--xs: 1rem;
+$font-size--s: 1.2rem;
+$font-size--default: 1.4rem;
+$font-size--m: 1.6rem;
+$font-size--l: 1.8rem;
+$font-size--2l: 2rem;
+$font-size--3l: 2.4rem;
+$font-size--4l: 2.8rem;
+$font-size--5l: 3.2rem;
+$font-size--6l: 3.6rem;
+
+// font-weight
+$font-weight--bold: 600;
+$font-weight--normal: 400;
+$font-weight--light: 300;
+
+// line-height
+$line-height: 1.5;
+
+
+// form
+$input-text--height: 37px;
